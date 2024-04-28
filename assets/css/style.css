@@ -1,0 +1,674 @@
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* Farver */
+    --charcoal: #363635;
+    --orangeButtons: #F5A65B;
+}
+
+
+/* General styling */
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-family: "Poppins", sans-serif;
+}
+h1, h2 {
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.centerHeader {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 5rem;
+
+}
+
+
+/* Header */
+/* Index hero */
+.headerIndex {
+    background: url("../img/heroIndex.png") no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: center top -15rem;
+}
+
+/* Quick And Easy hero */
+.headerQuickAndEasy {
+    background: url("../img/heroQuick.jpg") no-repeat;
+    background-size: cover;
+    background-position: center top -15rem;
+    height: 450px;
+}
+
+/* Easter hero */
+.headerEaster {
+    background: url("../img/heroEaster.png") no-repeat;
+    background-size: cover;
+    background-position: center top -15rem;
+    height: 450px;
+}
+
+/* Blog hero */
+.headerBlogs {
+    background: url("../img/heroEaster.png") no-repeat;
+    background-size: cover;
+    background-position: center top -15rem;
+    height: 450px;
+}
+.headerBlogs h1 {
+    color: white;
+}
+
+/* individual Recipe hero */
+.individualRecipeHero {
+    background: url("../img/blueberryPomegranate.jpg") no-repeat;
+    background-size: cover;
+    background-position: center top -15rem;
+    height: 450px;
+}
+
+/* individual blog hero */
+.individualBlogHero {
+    background: url(../img/heroEaster.png) no-repeat;
+    background-size: cover;
+    background-position: center top -15rem;
+    height: 60vh;
+}
+
+/* Header and nav styling */
+header h1 {
+    display: flex;
+    padding-left: 7rem;
+    align-items: center;
+    font-size: 70px;
+    color: var(--charcoal);
+    font-weight: 400;
+    padding-top: 4rem;
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+}
+ 
+.headerLogo {
+    font-size: 50px;
+    text-decoration: none;
+    color: var(--charcoal);
+}
+ 
+nav {
+    display: flex;
+    gap: 2rem;
+}
+ 
+nav i {
+    font-size: 25px;
+    margin-top: 3px;
+    color: var(--charcoal);
+}
+ 
+nav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--charcoal);
+}
+
+/* White hero variant */
+.whiteNavbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 4rem;
+}
+.whiteNavbar h1 {
+    color: white;
+}
+ 
+
+.whiteNavbar i {
+
+    color: white;
+}
+ 
+.whiteNavbar a {
+
+    color: white;
+}
+
+/* Footer */
+footer a, footer p, footer h2, footer i {
+    color: #EDEBE2;
+  }
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #617C51;
+    padding: 50px 0;
+}
+footer .logo {
+    font-size: 161px;
+    margin: 0;
+}
+footer a {
+    text-decoration: none;
+}
+   
+.adress {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+}
+.adress p {
+    font-size: 31;
+    font: bold;
+    margin: 3px;
+}
+.adress a {
+    font-size: 31;
+    font: bold;
+    margin: 15px 0;
+}
+.adress i {
+    font-size: 1.2rem;
+}
+   
+.footerNav {
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.footerNav nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 31;
+    font: bold;
+}
+.footerNav nav a {
+    font-size: 31;
+    font: bold;
+    margin: 8px 0;
+}
+   
+.logoAndSocialWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+   
+.socials a {
+    margin: 0 25px;
+    font-size: 45px;
+}
+
+/* Index page */
+.headerIndex h1 {
+    margin-top: 20vh;
+
+}
+
+.homepageSection {
+    background-color: #F5F4F0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    max-height: 450px;
+    overflow: hidden;
+    margin-top: 2rem;
+     
+}
+     
+.homepageSection img{
+     max-width:100%;
+     height: auto;
+     transform: translateY(-9%);
+}
+     
+.textHomepage{
+     padding: 3rem;
+     align-items: center;
+     
+}
+     
+.indexButton{
+     color:white;
+     background-color: var(--orangeButtons);
+     border: none;
+     font-weight: bold;
+     text-transform: uppercase;
+     width: 250px;
+     height: 70px;
+     border-radius: 4px;
+     margin: .5rem;
+     
+}
+
+.indexMoreRecipes {
+    color: var(--orangeButtons);
+
+}
+
+
+
+/* All recipes page (Categories) */
+.h1Categories {
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+}
+
+.headerCategories {
+    height: 300px;
+}
+
+.categorySection {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 100%;
+    margin: 4rem;
+
+}
+.categorySection article {
+    position: relative;
+    padding: .5rem;
+    width: 100%;
+    object-fit: contain;
+}
+
+.categorySection article h5 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; 
+    text-align: center; 
+    font-size: 20px; 
+    font-weight: bold; 
+}
+
+.categorySection article img {
+    border-radius: 18px 18px 10px 10px;
+    height: 20vh;
+    width: 95%;
+}
+
+.categorySection .placeholderHeading {
+    color: var(--charcoal);
+}
+
+.categoryh3 {
+    margin-left: 5rem;
+    margin-bottom: -3rem;
+    font-size: 25px;
+}
+
+/* individual Recipe Page */
+
+.opskriftGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin: 60px;
+}
+ 
+.ingrediensContainer, .ingrediensTags, .metode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+ 
+.ingrediensContainer {
+    background: #b5ca8d38;
+    height: 725px;
+}
+ 
+.ingrediensContainer h3 {
+    color: var(--charcoal);
+}
+ 
+.portionSelector {
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 0 10px rgb(154, 154, 154);
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+ 
+.minus, .plus {
+    border-style: none;
+    background: none;
+}
+ 
+.ingredienser{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 7rem;
+    margin-top: 2rem;
+}
+ 
+.ingrediensSocials, .ingrediensSocials i {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+ 
+.ingrediensSocials i {
+    font-size: 25px;
+    color: var(--charcoal);
+}
+ 
+.ingrediensSocials p {
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: var(--charcoal);
+}
+ 
+.ingrediensListe {
+    margin-bottom: 3rem;
+}
+ 
+.cookingTime p {
+    font-weight: 200;
+}
+ 
+.opskriftForfatter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+}
+ 
+.opskriftForfatterImg {
+    margin-top: 0.5rem;
+}
+ 
+.opskriftForfatterImg img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+ 
+.opskriftForfatterInfo {
+    line-height: 80%;
+    color: var(--charcoal);
+}
+ 
+.opskriftForfatterInfo p:nth-child(1) {
+    font-weight: 200;
+}
+ 
+.opskriftForfatterInfo p:nth-child(2) {
+    font-weight: 700;
+}
+ 
+.opskriftForfatterSocials {
+    font-size: 20px;
+    display: flex;
+    gap: 1rem;
+    color: var(--charcoal);
+    margin-bottom: 2rem;
+}
+ 
+.metode h2 {
+    font-size: 40px;
+    color: var(--charcoal);
+}
+ 
+.fremgangsmode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.fremgangsmode span, li {
+    gap: 2rem;
+}
+ 
+.fremgangsmode span {
+    border-radius: 50%;
+    padding: 0 20px;
+    list-style: none;
+    background: #B5CA8D;
+    color: white;
+    font-size: 40px;
+}
+ 
+.fremgangsmode li {
+    list-style: none;
+    margin-bottom: 3rem;
+    color: var(--charcoal);
+}
+ 
+.fremgangsmodeImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15rem;
+}
+ 
+.fremgangsmodeImg img {
+    width: 250px;
+    height: 300px;
+}
+ 
+.ingrediensTags {
+    display: unset;
+}
+ 
+.ingrediensTags h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 30px;
+    color: var(--charcoal);
+}
+ 
+.tagsCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+}
+ 
+.tagsCards a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #B5CA8D;
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+/* individual Blog Page */
+ 
+.individualBlogHero h1 {
+    justify-content: center;
+    font-size: 70px;
+    color: white;
+    padding-left: 0;
+
+}
+
+.individualBlogHero h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.individualBlogMain {
+    margin: 5rem 20rem;
+}
+
+.diabetesArticle h2 {
+    font-size: 40px;
+}
+ 
+.diabetesArticle p:nth-child(2) {
+    font-weight: 200;
+}
+ 
+.diabetesArticle p {
+    line-height: 220%;
+}
+ 
+.diabetesForfatter {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+ 
+.diabetesForfatterImg img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+ 
+.diabetesForfatterInfo {
+    line-height: 80%;
+    color: var(--charcoal);
+}
+ 
+.diabetesForfatterInfo p:nth-child(1) {
+    font-weight: 200;
+}
+ 
+.diabetesForfatterInfo p:nth-child(2) {
+    font-weight: 700;
+}
+ 
+.diabetesForfatterSocials {
+    font-size: 20px;
+    display: flex;
+    gap: 1rem;
+    color: var(--charcoal);
+    margin-bottom: 2rem;
+}
+ 
+.individualBlogSection h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 30px;
+    color: var(--charcoal);
+}
+
+
+/* Cart styling (index, easter, quick and easy, blog) */
+.quickAndEasyContainer, .easterContainer, .indexQuickAndEasy, .indexEasterAndPassover, .blogsContainerSeasonal, .blogsContainerTips {
+    margin: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+
+.cartArticle {
+    background-color: #EDEBE2;
+    margin: 2rem;
+    border-radius: 18px 18px 10px 10px;
+    max-width: 100%;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.052);
+
+
+}
+
+.cartArticle h4 {
+    text-align: center;
+    font-size: 15px;
+    color: #363635;
+    padding-bottom: 1rem;
+    margin: 1rem;
+    text-align: left;
+}
+
+.cartArticle img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    border-radius: 18px 18px 0px 0px;
+
+
+    
+}
+
+.blogSummary {
+    margin: 1rem;
+}
+
+.linkContainer{
+    text-align: right;
+    margin: 1rem;
+
+}
+.summaryLink {
+    color: #363635;
+}
+
+/* Drop down and search bar styling */
+.dropdownAndSeachContainer {
+    display: flex;
+    margin: 1rem;
+    justify-content: center;
+    margin-bottom: -3rem;
+}
+
+.dropdownAndSeachContainer div {
+    margin: 1rem;
+}
+
+.dropdown, .search-bar {
+    position: relative;
+    margin-right: 10px;
+}
+  
+.dropdown i {
+    position: absolute;
+    font-size: 35px;
+    top: 50%;
+    right: 20px; 
+    transform: translateY(-50%);
+}
+.dropdown select, .search-bar {
+    appearance: none;
+    background-color: #EDEBE2;
+    padding: 25px 40px 30px 10px; 
+    border-radius: 10px;
+    font-size: 20px;
+    color: #363635;
+    border: none;
+}
+
+.dropdown select {
+    width: 15rem;
+    text-align: center;
+
+}
+
+.search-bar {
+    width: 25rem;
+}
+
+
+
