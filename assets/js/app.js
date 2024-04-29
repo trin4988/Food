@@ -54,6 +54,22 @@ function getToken(){
 
 
 
+// Navigation // 
+// Dropdown Navigation //
+// Der laves en function for dropdown
+function toggleDropdown() {
+    //Der anvendes getElementById til at finde id'et med underkategorierne fra html-filen. Der tilføjes en classList til at vise og lukke for class "showRecipeCategorie"
+    document.getElementById("showRecipeCategorie").classList.toggle("showRecipeCategorie"); 
+}
+
+// Der anvendes getElementById til at target class "recipesLink", hvor der tilføjes en eventlistnerer til lytte på click, så når der klikkes på "recipeslink", så udføres der en handling. 
+document.getElementById("recipeLink").addEventListener("click", function(event) {
+    // Event.preventDefault forhindrer i standardhandling når der klikkes på opskrift, så den vil ikke åbne en ny side.
+    event.preventDefault();
+    // Dropdown menuen vises og lukkes ved at kalde på dropdown-funktionen.
+    toggleDropdown(); 
+});
+
 
 
 
