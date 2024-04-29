@@ -99,7 +99,7 @@ h1, h2 {
 
 /* individual blog hero */
 .individualBlogHero {
-    background: url(../img/heroEaster.png) no-repeat;
+    background: url(../img/heroDiabetesBlog.png) no-repeat;
     background-size: cover;
     background-position: center top -15rem;
     height: 60vh;
