@@ -444,11 +444,13 @@ footer a {
  
 .ingrediensContainer {
     background: #b5ca8d38;
-    height: 725px;
+    justify-content: flex-start;
+    height: fit-content;
 }
  
 .ingrediensContainer h3 {
     color: var(--charcoal);
+    margin-top: 2rem;
 }
  
 .portionSelector {
@@ -467,19 +469,20 @@ footer a {
     background: none;
 }
  
-.ingredienser{
+.ingredienser {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-gap: 7rem;
     margin-top: 2rem;
+    margin: 40px;
 }
  
 .ingrediensSocials, .ingrediensSocials i {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-top: 0.75rem;
 }
  
 .ingrediensSocials i {
@@ -536,7 +539,7 @@ footer a {
     display: flex;
     gap: 1rem;
     color: var(--charcoal);
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
  
 .metode h2 {
