@@ -282,6 +282,12 @@ footer a {
     margin: 0 25px;
     font-size: 45px;
 }
+.copyrightFooter {
+    display: flex;
+    justify-content: center;
+    grid-column: 2 / 3;
+    margin-top: 3rem;
+}
 
 /* Index page */
 .headerIndex h1 {
@@ -367,7 +373,7 @@ footer a {
 }
 
 .categorySection article img {
-    border-radius: 10px;
+    border-radius: 4px;
     height: 20vh;
     width: 95%;
 }
@@ -731,7 +737,7 @@ footer a {
     appearance: none;
     background-color: #EDEBE2;
     padding: 25px 40px 30px 10px; 
-    border-radius: 10px;
+    border-radius: 4px;
     font-size: 20px;
     color: #363635;
     border: none;
