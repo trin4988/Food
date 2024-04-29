@@ -63,7 +63,7 @@ function toggleDropdown() {
 }
 
 // Der anvendes getElementById til at target class "recipesLink", hvor der tilføjes en eventlistnerer til lytte på click, så når der klikkes på "recipeslink", så udføres der en handling. 
-document.getElementById("recipeLink").addEventListener("click", function(event) {
+document.getElementById("#recipeLink").addEventListener("click", function(event) {
     // Event.preventDefault forhindrer i standardhandling når der klikkes på opskrift, så den vil ikke åbne en ny side.
     event.preventDefault();
     // Dropdown menuen vises og lukkes ved at kalde på dropdown-funktionen.

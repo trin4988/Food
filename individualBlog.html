@@ -18,19 +18,32 @@
   </head>
   <body>
     <header class="individualBlogHero">
-      <div class="whiteNavbar">
+      <div class="navbar whiteNavbar">
         <a href="./index.html" class="headerLogo">FOOD</a>
         <nav>
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <a href="./index.html">HOME</a>
-          <a href="./categories.html">RECIPES</a>
-          <a href="./blogs.html">BLOG</a>
-          <a href="#">INGREDIENTS A-Z</a>
+          <ul>
+            <li><a href="">Home</a></li>
+            <li class="dropdownHero">
+              <a href="./categories.html" class="dropbtn" id="recipeLink"
+                >Recipes <i class="fa-solid fa-angle-down"></i
+              ></a>
+              <div id="showRecipeCategorie" class="showRecipeCategorie">
+                <a href="./quickAndEasy.html">Quick n' Easy</a>
+                <a href="./easter.html">Højtider</a>
+                <a href="#">Dinner</a>
+                <a href="#">Lifestyle</a>
+                <a href="#">Verdensmad</a>
+              </div>
+            </li>
+            <li><a href="./blogs.html">Blog</a></li>
+            <li><a href="">Ingredients a to z</a></li>
+          </ul>
         </nav>
       </div>
       <h1>Dinner for Diabetes</h1>
       <h3>- Nina Rodrigues</h3>
     </header>
+
     <main class="individualBlogMain">
       <section class="individualBlogSection">
         <article class="diabetesArticle">
