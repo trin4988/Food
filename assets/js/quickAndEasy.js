@@ -4,7 +4,7 @@ getToken()
 
 
 function getQuickAndEasyRecipes(){
-    fetch(baseURL + `posts?cook-time=${cooktimefast}`, {
+    fetch(baseURL + `posts?cook-time=${cooktimefast}&per_page=30`, {
         headers: {
             Authorization: "Bearer " + sessionStorage.getItem("myToken"),
         }
