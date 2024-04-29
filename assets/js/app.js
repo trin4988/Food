@@ -1,6 +1,5 @@
-// Variables
+// Starter med at erklære alle Variables:
 const baseURL = "https://api.rasmuspedersen.net/wp-json/wp/v2/";
-const recipeCategoryId = 3;
 
 // Forside 
 const containerElIndexQuick = document.querySelector(".indexQuickAndEasy");
@@ -16,9 +15,6 @@ const containerElEasterCategory = document.querySelector(".easterContainer");
 const containerElBlogSeasonal = document.querySelector(".blogsContainerSeasonal")
 const containerElBlogTips = document.querySelector(".blogsContainerTips")
 
-
-
-
 // Cook time variabler
 const cooktimeSlow = 8;
 const cooktimeMedium = 9;
@@ -31,8 +27,8 @@ const taxonomyEasterAndPassover = 39;
 const taxonomyBlogSeasonal = 134;
 const taxonomyBlogTricks = 135;
 
-
-// Get token
+// Private eller public???
+// Get token 
 function getToken(){
     const loginInfo = {
         username: "api-user", 
@@ -49,6 +45,7 @@ function getToken(){
     .then(data => {
         sessionStorage.setItem("myToken", data.data.token)
     })
+    // Hvis der kommer fejl i koden, bliver det fanget i konsollen
     .catch(err => console.log("fejl", err));
 }
 
@@ -69,6 +66,7 @@ document.getElementById("#recipeLink").addEventListener("click", function(event)
     // Dropdown menuen vises og lukkes ved at kalde på dropdown-funktionen.
     toggleDropdown(); 
 });
+
 
 
 
