@@ -27,6 +27,30 @@ h1, h2 {
 
 }
 
+.generalButton {
+    display: flex;
+    justify-content: center;
+
+}
+
+.ButtonStyling{
+    color:white;
+    background-color: var(--orangeButtons);
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 250px;
+    height: 70px;
+    border-radius: 4px;
+    margin: .5rem;
+    
+}
+
+.buttonSpacing {
+    margin-bottom: 5rem;
+    margin-top: -2rem;
+}
+
 
 /* Header */
 /* Index hero */
@@ -39,7 +63,7 @@ h1, h2 {
 
 /* Quick And Easy hero */
 .headerQuickAndEasy {
-    background: url("../img/heroQuick.jpg") no-repeat;
+    background: url("../img/heroQuick.png") no-repeat;
     background-size: cover;
     background-position: center top -15rem;
     height: 450px;
@@ -47,7 +71,7 @@ h1, h2 {
 
 /* Easter hero */
 .headerEaster {
-    background: url("../img/heroEaster.png") no-repeat;
+    background: url("../img/heroEaster.jpg") no-repeat;
     background-size: cover;
     background-position: center top -15rem;
     height: 450px;
@@ -55,7 +79,7 @@ h1, h2 {
 
 /* Blog hero */
 .headerBlogs {
-    background: url("../img/heroEaster.png") no-repeat;
+    background: url("../img/heroBlog.jpg") no-repeat;
     background-size: cover;
     background-position: center top -15rem;
     height: 450px;
@@ -86,7 +110,6 @@ header h1 {
     font-size: 70px;
     color: var(--charcoal);
     font-weight: 400;
-    padding-top: 4rem;
 
 }
 
@@ -147,7 +170,7 @@ nav a {
 }
 
 .showRecipeCategorie a {
-    color: black;
+    color: var(--charcoal);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -184,7 +207,7 @@ nav a {
 }
 
 .whiteNavbar .showRecipeCategorie a {
-    color: black;
+    color: var(--charcoal);
 }
 
 /* Footer */
@@ -290,21 +313,16 @@ footer a {
      
 }
      
-.indexButton{
-     color:white;
-     background-color: var(--orangeButtons);
-     border: none;
-     font-weight: bold;
-     text-transform: uppercase;
-     width: 250px;
-     height: 70px;
-     border-radius: 4px;
-     margin: .5rem;
-     
-}
+
+
 
 .indexMoreRecipes {
     color: var(--orangeButtons);
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5rem;
+    margin-top: -4rem;
+    margin-bottom: 3rem;
 
 }
 
@@ -341,10 +359,11 @@ footer a {
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white; 
+    color: var(--charcoal); 
     text-align: center; 
     font-size: 20px; 
     font-weight: bold; 
+    text-transform: uppercase;
 }
 
 .categorySection article img {
@@ -353,14 +372,13 @@ footer a {
     width: 95%;
 }
 
-.categorySection .placeholderHeading {
-    color: var(--charcoal);
-}
+
 
 .categoryh3 {
     margin-left: 5rem;
     margin-bottom: -3rem;
     font-size: 25px;
+    text-transform: uppercase;
 }
 
 /* individual Recipe Page */
@@ -670,6 +688,18 @@ footer a {
 }
 .summaryLink {
     color: #363635;
+}
+
+/* Blog Categories */
+.blogCategoryHeading {
+    margin-left: 5rem;
+    margin-top: 5rem;
+    margin-bottom: -4rem;
+    font-size: 40px;
+}
+
+.tipsAndtricksSection {
+    margin-top: -7rem;
 }
 
 /* Drop down and search bar styling */

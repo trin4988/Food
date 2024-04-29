@@ -18,7 +18,7 @@
   </head>
   <body>
     <header class="headerBlogs">
-      <div class="navbar">
+      <div class="navbar whiteNavbar">
         <a href="./index.html" class="headerLogo">FOOD</a>
         <nav>
           <ul>
@@ -44,8 +44,47 @@
     </header>
 
     <main>
-      <div class="blogsContainerSeasonal"></div>
-      <div class="blogsContainerTips"></div>
+      <div class="dropdownAndSeachContainer">
+        <div class="dropdown">
+          <select name="dropdownSort" id="dropdown1">
+            <option value="sort" selected>Sort</option>
+            <option value="option1">Latest</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </select>
+          <i class="fa-solid fa-angle-down" style="color: #b5ca8d"></i>
+        </div>
+
+        <div class="dropdown">
+          <select name="dropdown" id="dropdown2">
+            <option value="filter" selected>Filter</option>
+            <option value="option1">Seasonal & Sustainable</option>
+            <option value="option2">Tips & Tricks</option>
+            <option value="option3">Option 3</option>
+          </select>
+          <i class="fa-solid fa-angle-down" style="color: #b5ca8d"></i>
+        </div>
+
+        <div class="searchBarDiv">
+          <input type="text" class="search-bar" placeholder="Search here..." />
+          <!-- <i class="fa-solid fa-magnifying-glass" style="color: #b5ca8d"></i> -->
+        </div>
+      </div>
+      <section>
+        <h2 class="blogCategoryHeading">Seasonal & Sustainable</h2>
+        <div class="blogsContainerSeasonal"></div>
+        <div class="generalButton">
+          <button class="ButtonStyling buttonSpacing">More Recipes</button>
+        </div>
+      </section>
+
+      <section class="tipsAndtricksSection">
+        <h2 class="blogCategoryHeading">Tips & Tricks</h2>
+        <div class="blogsContainerTips"></div>
+        <div class="generalButton">
+          <button class="ButtonStyling buttonSpacing">More Recipes</button>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="adress">
