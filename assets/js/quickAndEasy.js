@@ -1,5 +1,5 @@
 
-getToken()
+fetchContent()
 .then(() => getQuickAndEasyRecipes());
 
 
@@ -18,9 +18,16 @@ function getQuickAndEasyRecipes(){
 
 function renderQuickAndEasyRecipes(post){
     containerElQuickAndEasyCategory.innerHTML += `
+    <a href="post.html?id=${post.id}" class=postDecor>
     <article class="cartArticle">
           <img src="${post.acf.image.url}" alt="">
           <h4>${post.title.rendered}</h4>
         </article>
+    </a>
+
     `
 }
+
+fetchRecipe(recipeId);
+
+

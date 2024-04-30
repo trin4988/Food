@@ -1,5 +1,5 @@
 
-getToken()
+fetchContent()
 .then(() => getQuickAndEasyIndex());
 
 
@@ -22,14 +22,16 @@ function getQuickAndEasyIndex(){
 
 function renderQuickAndEasyPost(post){
     containerElIndexQuick.innerHTML += `
+    <a href="post.html?id=${post.id}" class=postDecor>
     <article class="cartArticle">
           <img src="${post.acf.image.url}" alt="">
           <h4>${post.title.rendered}</h4>
         </article>
+    </a>
     `
 }
 
-getToken()
+fetchContent()
 .then(() => getEasterAndPassoverIndex());
 
 
@@ -41,10 +43,10 @@ function getEasterAndPassoverIndex(){
     })
     .then(res => res.json())
     .then(recipes => {
-                  // Get only the last three recipes
+                  // Henter kun sidste 3 opskrifter
           const lastThreeRecipes = recipes.slice(0, 3);
         
-          // Render the last three recipes
+          // Render kun sidste 3 opskrifter
           lastThreeRecipes.forEach(post => renderEasterAndPassoverIndex(post));
     })
     .catch(err => console.log("Fejl", err));
@@ -52,10 +54,12 @@ function getEasterAndPassoverIndex(){
 
 function renderEasterAndPassoverIndex(post){
     containerElEaster.innerHTML += `
+    <a href="post.html?id=${post.id}" class=postDecor>
     <article class="cartArticle">
           <img src="${post.acf.image.url}" alt="">
           <h4>${post.title.rendered}</h4>
         </article>
+    </a>
     `
     
 }
