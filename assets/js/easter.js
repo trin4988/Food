@@ -1,5 +1,5 @@
 
-getToken()
+fetchContent()
 .then(() => getEasterRecipes());
 
 
@@ -18,10 +18,12 @@ function getEasterRecipes(){
 
 function renderEasterPost(post){
     containerElEasterCategory.innerHTML += `
+    <a href="post.html?id=${post.id}" class=postDecor>
     <article class="cartArticle">
           <img src="${post.acf.image.url}" alt="">
           <h4>${post.title.rendered}</h4>
         </article>
+    </a>
     `
 }
 

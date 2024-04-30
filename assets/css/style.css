@@ -56,69 +56,37 @@ h1, h2 {
 /* Header */
 /* Index hero */
 .headerIndex {
-    background: url("../img/heroIndex.png") no-repeat;
-    background-size: cover;
+    position: relative; 
     height: 100vh;
-    background-position: center top -15rem;
 }
-
-/* Quick And Easy hero */
-.headerQuickAndEasy {
-    background: url("../img/heroQuick.png") no-repeat;
-    background-size: cover;
-    background-position: center top -15rem;
+/* Hero på alle andre sider */
+.heroNormal {
+    position: relative; 
     height: 450px;
 }
 
-/* Easter hero */
-.headerEaster {
-    background: url("../img/heroEaster.jpg") no-repeat;
-    background-size: cover;
-    background-position: center top -15rem;
-    height: 450px;
+.hero-image {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1; 
 }
 
-/* Blog hero */
-.headerBlogs {
-    background: url("../img/heroBlog.jpg") no-repeat;
-    background-size: cover;
-    background-position: center top -15rem;
-    height: 450px;
-}
-.headerBlogs h1 {
-    color: white;
-}
-
-/* individual Recipe hero */
-.individualRecipeHero {
-    background: url("../img/blueberryPomegranate.jpg") no-repeat;
-    background-size: cover;
-    background-position: center top -15rem;
-    height: 450px;
-}
-
-/* individual blog hero */
-.individualBlogHero {
-    background: url(../img/heroDiabetesBlog.png) no-repeat;
-    background-size: cover;
-    background-position: center top -15rem;
-    height: 60vh;
-}
-
-/* Header and nav styling */
+/* header og nav*/
 header h1 {
     text-align: center;
     font-size: 70px;
     color: var(--charcoal);
     font-weight: 400;
-
+    margin-bottom: 20px; 
 }
 
 .indexH1 {
     font-size: 80px;
-    
 }
-
 
 /* Dropdrown */
 .navbar {
@@ -126,41 +94,36 @@ header h1 {
     justify-content: space-between;
     padding: 2rem 4rem;
 }
- 
+
 .headerLogo {
     font-size: 50px;
     text-decoration: none;
     color: var(--charcoal);
     font-family: "Bebas Neue", sans-serif;
 }
- 
- 
-nav{
-    justify-content: flex-end;
- 
-}
- 
 
-nav ul{
+nav {
+    justify-content: flex-end;
+}
+
+nav ul {
     display: flex;
     list-style-type: none;
     justify-content: flex-end;
     gap: 2.5rem;
-    }
+}
 
 nav i {
     font-size: 25px;
     margin-top: 3px;
     color: var(--charcoal);
 }
- 
+
 nav a {
     text-decoration: none;
     font-size: 20px;
     color: var(--charcoal);
 }
-
-
 
 .dropbtn {
     cursor: pointer;
@@ -171,7 +134,7 @@ nav a {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -189,6 +152,7 @@ nav a {
 .dropdownHero:hover .showRecipeCategorie {
     display: block;
 }
+
 
 /* White hero variant */
 .whiteNavbar {
@@ -209,6 +173,9 @@ nav a {
  
 .whiteNavbar a {
 
+    color: white;
+}
+.whiteHeroH1 {
     color: white;
 }
 
@@ -427,11 +394,11 @@ footer a {
 }
 
 /* individual Recipe Page */
-
+ 
 .opskriftGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 40px;
     margin: 60px;
 }
  
@@ -542,6 +509,10 @@ footer a {
     margin-bottom: 3rem;
 }
  
+.metode {
+    justify-content: flex-start;
+}
+ 
 .metode h2 {
     font-size: 40px;
     color: var(--charcoal);
@@ -553,23 +524,41 @@ footer a {
     align-items: center;
 }
  
-.fremgangsmode span, li {
-    gap: 2rem;
-}
- 
-.fremgangsmode span {
-    border-radius: 50%;
-    padding: 0 20px;
-    list-style: none;
+.fremgangsmode li::before {
     background: #B5CA8D;
     color: white;
     font-size: 40px;
+    border-radius: 50%;
+    padding: 5px 20px;
+    min-width: 5%;
+    display: flex;
+    justify-content: center;
+}
+ 
+.fremgangsmode ol {
+    counter-reset: myOlDesign;
+}
+ 
+.fremgangsmode ol li {
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+ 
+.fremgangsmode ol li:before {
+    counter-increment: myOlDesign;
+    content: counter(myOlDesign)".";
 }
  
 .fremgangsmode li {
-    list-style: none;
-    margin-bottom: 3rem;
-    color: var(--charcoal);
+    font-size: 20px;
+    align-items: baseline;
+}
+ 
+.fremgangsmode li:empty {
+    display: none;
 }
  
 .fremgangsmodeImg {
@@ -611,6 +600,7 @@ footer a {
     font-weight: 700;
     border-radius: 10px;
 }
+
 
 /* individual Blog Page */
  
@@ -701,17 +691,16 @@ footer a {
     margin: 2rem;
     border-radius: 18px 18px 10px 10px;
     max-width: 100%;
+    height: 87%;
     box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.052);
 
 
 }
 
 .cartArticle h4 {
-    text-align: center;
     font-size: 15px;
     color: #363635;
-    padding-bottom: 1rem;
-    margin: 1rem;
+    padding: 1rem;
     text-align: left;
 }
 
@@ -723,6 +712,12 @@ footer a {
 
 
     
+}
+.cartArticle p {
+    color: var(--charcoal)
+}
+.postDecor {
+    text-decoration: none;
 }
 
 .blogSummary {
