@@ -109,7 +109,7 @@ function renderRecipe(recipe) {
               </div>
             </li>
             <li><a href="./blogs.html">Blog</a></li>
-            <li><a href="">Ingredients a to z</a></li>
+            <li><a href="./indexering.html">Ingredients a to z</a></li>
           </ul>
         </nav>
       </div>
@@ -253,7 +253,7 @@ function renderBlogPost(blog) {
               </div>
             </li>
             <li><a href="./blogs.html">Blog</a></li>
-            <li><a href="">Ingredients a to z</a></li>
+            <li><a href="./indexering.html">Ingredients a to z</a></li>
           </ul>
         </nav>
       </div>
@@ -262,36 +262,75 @@ function renderBlogPost(blog) {
     </header>
 
 
-  <main class="individualBlogMain">
-    <section class="individualBlogSection">
-      <article class="diabetesArticle">
-        <h2>${blog.title.rendered}</h2>
-        <p>${blog.date}</p>
-        <p>
-          ${blog.acf.description}
-        </p>
-      </article>
-    </section>
-    <section class="individualBlogSection">
-      <div class="diabetesForfatter">
-        <div class="diabetesForfatterImg">
-          <img src="./assets/img/frank-hvam-klovn.jpeg" alt="" />
-        </div>
-        <div class="diabetesForfatterInfo">
-          <p>Written by:</p>
-          <p>Nina Rodrigues</p>
-          <p>Follow me on:</p>
-          <div class="diabetesForfatterSocials">
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-youtube"></i>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="individualBlogSection">
-      <h3>Recommended dinner recipes for diabetes</h3>
-    </section>
+  <main>
+  <div class="individualBlogMain"
+  <section class="individualBlogSection">
+  <article class="diabetesArticle">
+  <h2>${blog.title.rendered}</h2>
+  <p>${blog.date}</p>
+  <p>
+  ${blog.acf.description}
+  </p>
+  </article>
+  </section>
+  <section class="individualBlogSection">
+  <div class="diabetesForfatter">
+  <div class="diabetesForfatterImg">
+  <img src="./assets/img/frank-hvam-klovn.jpeg" alt="" />
+  </div>
+  <div class="diabetesForfatterInfo">
+  <p>Written by:</p>
+  <p>Nina Rodrigues</p>
+  <p>Follow me on:</p>
+  <div class="diabetesForfatterSocials">
+  <i class="fa-brands fa-facebook-f"></i>
+  <i class="fa-brands fa-instagram"></i>
+  <i class="fa-brands fa-youtube"></i>
+  </div>
+  </div>
+  </div>
+  </section>
+  </div>
+  <section class="individualBlogSection">
+  <h3>Recommended dinner recipes for diabetes</h3>
+  </section>
+
+  <section class="diabetesArticles">
+    <a href="post.html?id=${blog.id}" class=postDecor cartArticle>
+    <article class="cartArticle">
+          <img src="${blog.acf.image.url}" alt="">
+          <h4>${blog.title.rendered}</h4>
+        </article>
+    </a>
+
+    <a href="post.html?id=${blog.id}" class=postDecor cartArticle>
+    <article class="cartArticle">
+          <img src="${blog.acf.image.url}" alt="">
+          <h4>${blog.title.rendered}</h4>
+        </article>
+    </a>
+
+
+    <a href="post.html?id=${blog.id}" class=postDecor cartArticle>
+    <article class="cartArticle">
+          <img src="${blog.acf.image.url}" alt="">
+          <h4>${blog.title.rendered}</h4>
+        </article>
+    </a>
+
+
+    <a href="post.html?id=${blog.id}" class=postDecor cartArticle>
+    <article class="cartArticle">
+          <img src="${blog.acf.image.url}" alt="">
+          <h4>${blog.title.rendered}</h4>
+        </article>
+    </a>
+
+
+ 
+  </section>
+  
+
     <section>
       <h3>LATEST ARTICLES</h3>
     </section>
