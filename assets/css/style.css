@@ -685,7 +685,13 @@ footer a {
     grid-template-columns: repeat(3, 1fr);
     
 }
+.diabetesArticles {
+    margin: 0 15rem 0 15rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
 
+}
 .cartArticle {
     background-color: #EDEBE2;
     margin: 2rem;
