@@ -85,6 +85,15 @@ h1, h2 {
     background-position: center top -15rem;
     height: 450px;
 }
+
+/* Indexering hero */
+.headerIndexering {
+    background: url("../img/heroIndexering.png") no-repeat;
+    background-size: cover;
+    background-position: center top -15rem;
+    height: 450px;
+}
+
 .headerBlogs h1 {
     color: white;
 }
@@ -133,8 +142,7 @@ header h1 {
     color: var(--charcoal);
     font-family: "Bebas Neue", sans-serif;
 }
- 
- 
+  
 nav{
     justify-content: flex-end;
  
@@ -795,5 +803,52 @@ footer a {
     width: 25rem;
 }
 
+/* Indexering page */
+.searchIndexering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 4rem 7rem;
+    gap: 1rem;
+}
 
+.indexCategories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+}
 
+.indexCategories i {
+    font-size: 40px;
+}
+
+.allIngredientsIndex, .vegetablesIndex, .fruitsIndex, .meatsIndex, .carbsIndex, .dairyIndex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.letterContainer p {
+    letter-spacing: 1rem;
+    font-size: 25px;
+    line-height: 200%;
+    font-weight: 500;
+}
+
+.searchIndexering input {
+    width: 100%;
+}
+
+.searchIndexering input, placeholder {
+    padding-left: 2rem;
+}
+
+.indexH2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
