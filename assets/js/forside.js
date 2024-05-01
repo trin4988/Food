@@ -1,21 +1,14 @@
-
+// Quick and easy sektion forside
+// Samme kode brugt andre sider, med andet url og navne
 fetchContent()
 .then(() => getQuickAndEasyIndex());
 
 
 function getQuickAndEasyIndex(){
-    fetch(baseURL + `posts?cook-time=${cooktimefast}`, {
-        headers: {
-            Authorization: "Bearer " + sessionStorage.getItem("myToken"),
-        }
-    })
+    fetch(baseURL + `posts?cook-time=${cooktimefast}&per_page=3`)
     .then(res => res.json())
     .then(recipes => {
-                  // Get only the last three recipes
-          const lastThreeRecipes = recipes.slice(0, 3);
-        
-          // Render the last three recipes
-          lastThreeRecipes.forEach(post => renderQuickAndEasyPost(post));
+          recipes.forEach(post => renderQuickAndEasyPost(post));
     })
     .catch(err => console.log("Fejl", err));
 }
@@ -31,23 +24,16 @@ function renderQuickAndEasyPost(post){
     `
 }
 
+// Easter and passover sektion forside
 fetchContent()
 .then(() => getEasterAndPassoverIndex());
 
 
 function getEasterAndPassoverIndex(){
-    fetch(baseURL + `posts?season=${taxonomyEasterAndPassover}`, {
-        headers: {
-            Authorization: "Bearer " + sessionStorage.getItem("myToken"),
-        }
-    })
+    fetch(baseURL + `posts?season=${taxonomyEasterAndPassover}&per_page=3`)
     .then(res => res.json())
     .then(recipes => {
-                  // Henter kun sidste 3 opskrifter
-          const lastThreeRecipes = recipes.slice(0, 3);
-        
-          // Render kun sidste 3 opskrifter
-          lastThreeRecipes.forEach(post => renderEasterAndPassoverIndex(post));
+          recipes.forEach(post => renderEasterAndPassoverIndex(post));
     })
     .catch(err => console.log("Fejl", err));
 }

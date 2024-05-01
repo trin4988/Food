@@ -1,6 +1,7 @@
 // Starter med at erklære alle Variables:
 const baseURL = "https://api.rasmuspedersen.net/wp-json/wp/v2/";
 
+// Queryselector variabler
 // Forside 
 const containerElIndexQuick = document.querySelector(".indexQuickAndEasy");
 const containerElEaster = document.querySelector(".indexEasterAndPassover");
@@ -14,6 +15,7 @@ const containerElEasterCategory = document.querySelector(".easterContainer");
 // Blog
 const containerElBlogSeasonal = document.querySelector(".blogsContainerSeasonal")
 const containerElBlogTips = document.querySelector(".blogsContainerTips")
+const containerRecommendedArticles = document.querySelector(".diabetesArticles")
 
 // Post
 const postContainerSite = document.querySelector(".postContainer")
@@ -21,10 +23,14 @@ const postContainerSite = document.querySelector(".postContainer")
 // Blog post 
 const postContainerBlog = document.querySelector(".blogPostContainer")
 
+// ID variabler
 // Cook time variabler
 const cooktimeSlow = 8;
 const cooktimeMedium = 9;
 const cooktimefast = 10;
+
+// Diabetes
+const diabetesRecipes = 62;
 
 // Season Variabler
 const taxonomyEasterAndPassover = 39;
@@ -33,22 +39,18 @@ const taxonomyEasterAndPassover = 39;
 const taxonomyBlogSeasonal = 134;
 const taxonomyBlogTricks = 135;
 
-// Render hver side
+// Render params hver side
 const params = new URLSearchParams(window.location.search);
 const recipeId = params.get("id");
 
-
+// Fetch indhold funktion
 function fetchContent() {
+  // Bruger fetch til lave en anmodning til api, GET til at hente data fra api  
   return fetch("https://api.rasmuspedersen.net/wp-json/posts/", {
       method: "GET",
-      headers: {
-          "Content-Type": "application/json",
-      }
   })
   .then(res => res.json())
-  .then(posts => {
-      console.log(posts);
-  })
+  // Fanger fejl i console
   .catch(err => console.log("fejl", err));
 }
 
@@ -72,20 +74,22 @@ document.getElementById("#recipeLink").addEventListener("click", function(event)
 
 //  Åben opskrifter med unikt ID 
 function fetchRecipe(recipeId) {
+  // Hvis if statement er korrekt, udføres koden
     if (recipeId) {
-        fetch(baseURL + `posts/${recipeId}`, {
-                headers: {
-                    Authorization: "Bearer " + sessionStorage.getItem("myToken"),
-                }
-            })
+      // Fetch laver anmodning til det specifikke post
+        fetch(baseURL + `posts/${recipeId}`)
+        // Vi anvender den her til at lave dataen eller responsen fra "fetchContent()" om til js format. Den laver data vi får igen om til et js objekt
             .then(res => res.json())
+            // then metoden render data fra backend, i innerhtml funktionen nedenunder
             .then(recipe => {
                 renderRecipe(recipe);
             })
+            // Fanger eventuelle fejl i konsollen
             .catch(err => console.log("FEJL:", err));
     }
 }
-
+// Laver function som skaber innerhtml til opskrift siderne
+// Bruger dynamiske tags(${}) til at indsætte indhold afhængigt af ID
 function renderRecipe(recipe) {
     postContainerSite.innerHTML = `
 
@@ -139,22 +143,39 @@ function renderRecipe(recipe) {
             </div>
             <div class="ingrediensListe">
               <div class="cookingTime">
-                <p>Cooking time: 5 min</p>
+                <p>Cooking time:</p>
               </div>
-              <p>1 large banana</p>
-              <p>1 cup blueberries</p>
-              <p>2 tbsps hemp seeds</p>
-              <p>1 medium pomegranate (juiced)</p>
+              <p>${recipe.acf.ingredients.ingredient_1}</p>
+              <p>${recipe.acf.ingredients.ingredient_2}</p>
+              <p>${recipe.acf.ingredients.ingredient_3}</p>
+              <p>${recipe.acf.ingredients.ingredient_4}</p>
+              <p>${recipe.acf.ingredients.ingredient_5}</p>
+              <p>${recipe.acf.ingredients.ingredient_6}</p>
+              <p>${recipe.acf.ingredients.ingredient_7}</p>
+              <p>${recipe.acf.ingredients.ingredient_8}</p>
+              <p>${recipe.acf.ingredients.ingredient_9}</p>
+              <p>${recipe.acf.ingredients.ingredient_10}</p>
+              <p>${recipe.acf.ingredients.ingredient_11}</p>
+              <p>${recipe.acf.ingredients.ingredient_12}</p>
+              <p>${recipe.acf.ingredients.ingredient_13}</p>
+              <p>${recipe.acf.ingredients.ingredient_14}</p>
+              <p>${recipe.acf.ingredients.ingredient_15}</p>
+              <p>${recipe.acf.ingredients.ingredient_16}</p>
+              <p>${recipe.acf.ingredients.ingredient_17}</p>
+              <p>${recipe.acf.ingredients.ingredient_18}</p>
+              <p>${recipe.acf.ingredients.ingredient_19}</p>
+              <p>${recipe.acf.ingredients.ingredient_20}</p>
+
             </div>
           </div>
           <div class="opskriftForfatter">
             <div class="opskriftForfatterImg">
-              <img src="./asset/img/frank-hvam-klovn.jpeg" alt="" />
+              <img src="./assets/img/defaultProfilePicture.svg.png" alt="" />
             </div>
             <div class="opskriftForfatterInfo">
               <p>Recipe by:</p>
-              <p>Nina Rodrigues</p>
-              <p>November 24, 2017</p>
+              <p>${recipe.acf.author[0].post_title}</p>
+              <p>${recipe.acf.author[0].post_date}</p>
               <p>Follow me on:</p>
               <div class="opskriftForfatterSocials">
                 <i class="fa-brands fa-facebook-f"></i>
@@ -178,10 +199,6 @@ function renderRecipe(recipe) {
               <li>${recipe.acf.method.step_8}</li>
               <li>${recipe.acf.method.step_9}</li>
               <li>${recipe.acf.method.step_10}</li>
-              <li>${recipe.acf.method.step_11}</li>
-              <li>${recipe.acf.method.step_12}</li>
-              <li>${recipe.acf.method.step_13}</li>
-              <li>${recipe.acf.method.step_14}</li>
             </ol>
           </div>
         </div>
@@ -200,7 +217,7 @@ function renderRecipe(recipe) {
         </div>
         <div class="fremgangsmodeImg">
           <img
-            src="./asset/img/blueberrypomegranateandhempseedsmoothielandscape550x55023fbe33fd69d84723cca3a80df46579d3f34460f3a5797e72ee1a1a2f1686e67.jpg"
+            src="${recipe.acf.image.url}"
             alt=""
           />
         </div>
@@ -214,14 +231,10 @@ function renderRecipe(recipe) {
 
 
 // Åben Blog opslag med unikt ID
-
+// Det er samme kode tidligere, med anderledes url og navn
 function fetchBlog(recipeId) {
     if (recipeId) {
-        fetch(baseURL + `posts/${recipeId}`, {
-                headers: {
-                    Authorization: "Bearer " + sessionStorage.getItem("myToken"),
-                }
-            })
+        fetch(baseURL + `posts/${recipeId}`)
             .then(res => res.json())
             .then(recipe => {
                 renderBlogPost(recipe);
@@ -276,11 +289,10 @@ function renderBlogPost(blog) {
   <section class="individualBlogSection">
   <div class="diabetesForfatter">
   <div class="diabetesForfatterImg">
-  <img src="./assets/img/frank-hvam-klovn.jpeg" alt="" />
   </div>
   <div class="diabetesForfatterInfo">
   <p>Written by:</p>
-  <p>Nina Rodrigues</p>
+  <p>${blog.acf.author[0].post_title}</p>
   <p>Follow me on:</p>
   <div class="diabetesForfatterSocials">
   <i class="fa-brands fa-facebook-f"></i>
@@ -291,52 +303,17 @@ function renderBlogPost(blog) {
   </div>
   </section>
   </div>
-  <section class="individualBlogSection">
-  <h3>Recommended dinner recipes for diabetes</h3>
-  </section>
-
-  <section class="diabetesArticles">
-    <a href="post.html?id=${blog.id}" class=postDecor cartArticle>
-    <article class="cartArticle">
-          <img src="${blog.acf.image.url}" alt="">
-          <h4>${blog.title.rendered}</h4>
-        </article>
-    </a>
-
-    <a href="post.html?id=${blog.id}" class=postDecor cartArticle>
-    <article class="cartArticle">
-          <img src="${blog.acf.image.url}" alt="">
-          <h4>${blog.title.rendered}</h4>
-        </article>
-    </a>
+  <div class="videoBlog">${blog.acf.video}</div>
 
 
-    <a href="post.html?id=${blog.id}" class=postDecor cartArticle>
-    <article class="cartArticle">
-          <img src="${blog.acf.image.url}" alt="">
-          <h4>${blog.title.rendered}</h4>
-        </article>
-    </a>
-
-
-    <a href="post.html?id=${blog.id}" class=postDecor cartArticle>
-    <article class="cartArticle">
-          <img src="${blog.acf.image.url}" alt="">
-          <h4>${blog.title.rendered}</h4>
-        </article>
-    </a>
-
-
- 
-  </section>
-  
-
-    <section>
-      <h3>LATEST ARTICLES</h3>
+    <section class="individualBlogSection">
+      <h3>Latest Diabetis Recipes</h3>
     </section>
   </main>
 
    
     `;
 }
+
+
 
