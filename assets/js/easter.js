@@ -1,14 +1,11 @@
-
+// Easter and passover side
+// Samme kode brugt andre sider, med andet url og navne
 fetchContent()
 .then(() => getEasterRecipes());
 
 
 function getEasterRecipes(){
-    fetch(baseURL + `posts?season=${taxonomyEasterAndPassover}`, {
-        headers: {
-            Authorization: "Bearer " + sessionStorage.getItem("myToken"),
-        }
-    })
+    fetch(baseURL + `posts?season=${taxonomyEasterAndPassover}`)
     .then(res => res.json())
     .then(recipes => {
         recipes.forEach(post => renderEasterPost(post));

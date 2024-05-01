@@ -8,8 +8,6 @@
     --orangeButtons: #F5A65B;
 }
 
-
-
 /* General styling */
 body {
     margin: 0;
@@ -600,7 +598,7 @@ footer a {
 }
  
 .fremgangsmode li {
-    font-size: 20px;
+    font-size: 16px;
     align-items: baseline;
 }
  
@@ -613,6 +611,7 @@ footer a {
     justify-content: center;
     align-items: center;
     margin-bottom: 15rem;
+    margin-top: 30px;
 }
  
 .fremgangsmodeImg img {
@@ -649,22 +648,11 @@ footer a {
 }
 
 
+
+
 /* individual Blog Page */
  
-.individualBlogHero h1 {
-    justify-content: center;
-    font-size: 70px;
-    color: white;
-    padding-left: 0;
 
-}
-
-.individualBlogHero h3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
 
 .individualBlogMain {
     margin: 5rem 20rem;
@@ -684,8 +672,9 @@ footer a {
  
 .diabetesForfatter {
     display: flex;
-    gap: 2rem;
+    justify-content: center;
     margin-top: 3rem;
+    text-align: center;
 }
  
 .diabetesForfatterImg img {
@@ -710,6 +699,7 @@ footer a {
 .diabetesForfatterSocials {
     font-size: 20px;
     display: flex;
+    justify-content: center;
     gap: 1rem;
     color: var(--charcoal);
     margin-bottom: 2rem;
@@ -724,6 +714,12 @@ footer a {
     color: var(--charcoal);
 }
 
+.videoBlog {
+    display: flex;
+    justify-content: center;
+    margin-top: -5rem;
+}
+
 
 /* Cart styling (index, easter, quick and easy, blog) */
 .quickAndEasyContainer, .easterContainer, .indexQuickAndEasy, .indexEasterAndPassover, .blogsContainerSeasonal, .blogsContainerTips {
@@ -733,7 +729,7 @@ footer a {
     
 }
 .diabetesArticles {
-    margin: 0 15rem 0 15rem;
+    margin: 0 15rem 5rem 15rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     
@@ -752,7 +748,7 @@ footer a {
 
 .cartArticle h4 {
     font-size: 15px;
-    color: #363635;
+    color: var(--charcoal);
     padding: 1rem;
     text-align: left;
 }
@@ -783,7 +779,7 @@ footer a {
 
 }
 .summaryLink {
-    color: #363635;
+    color: var(--charcoal);
 }
 
 /* Blog Categories */
@@ -829,7 +825,7 @@ footer a {
     padding: 25px 40px 30px 10px; 
     border-radius: 4px;
     font-size: 20px;
-    color: #363635;
+    color: var(--charcoal);
     border: none;
 }
 
